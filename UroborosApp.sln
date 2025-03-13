@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UroborosApp", "UroborosApp\UroborosApp.csproj", "{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15F3B245-F675-4429-8C3A-CA602C472F52}
+	EndGlobalSection
+EndGlobal
