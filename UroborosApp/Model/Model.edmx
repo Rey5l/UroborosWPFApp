@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище UroborosDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище UroborosDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Achievements">
           <Key>
             <PropertyRef Name="id" />
@@ -106,6 +106,10 @@
           <Property Name="email" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="password_hash" Type="nvarchar(max)" Nullable="false" />
           <Property Name="registration_date" Type="datetime" />
+          <Property Name="avatar_url" Type="nvarchar" MaxLength="255" />
+          <Property Name="last_login" Type="datetime" />
+          <Property Name="role" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="is_active" Type="bit" Nullable="false" />
         </EntityType>
         <Association Name="FK__Achieveme__user___70DDC3D8">
           <End Role="users" Type="Self.users" Multiplicity="1" />
@@ -308,8 +312,7 @@
             <End Role="Material" EntitySet="Material" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="UroborosDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -436,6 +439,10 @@
           <NavigationProperty Name="Learning_Statistics" Relationship="Self.FK__Learning___user___693CA210" FromRole="users" ToRole="Learning_Statistics" />
           <NavigationProperty Name="Material" Relationship="Self.FK__Material__user_i__49C3F6B7" FromRole="users" ToRole="Material" />
           <NavigationProperty Name="Reminder" Relationship="Self.FK__Reminder__user_i__5CD6CB2B" FromRole="users" ToRole="Reminder" />
+          <Property Name="avatar_url" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="last_login" Type="DateTime" Precision="3" />
+          <Property Name="role" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="is_active" Type="Boolean" Nullable="false" />
         </EntityType>
         <Association Name="FK__Achieveme__user___70DDC3D8">
           <End Role="users" Type="Self.users" Multiplicity="1" />
@@ -749,6 +756,10 @@
           <EntitySetMapping Name="users">
             <EntityTypeMapping TypeName="UroborosDBModel.users">
               <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="is_active" ColumnName="is_active" />
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="last_login" ColumnName="last_login" />
+                <ScalarProperty Name="avatar_url" ColumnName="avatar_url" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="email" ColumnName="email" />

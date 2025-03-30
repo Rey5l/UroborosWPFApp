@@ -101,6 +101,10 @@
     <Property Name="email" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="password_hash" Type="nvarchar(max)" Nullable="false" />
     <Property Name="registration_date" Type="datetime" />
+    <Property Name="avatar_url" Type="nvarchar" MaxLength="255" />
+    <Property Name="last_login" Type="datetime" />
+    <Property Name="role" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="is_active" Type="bit" Nullable="false" />
   </EntityType>
   <Association Name="FK__Achieveme__user___70DDC3D8">
     <End Role="users" Type="Self.users" Multiplicity="1" />

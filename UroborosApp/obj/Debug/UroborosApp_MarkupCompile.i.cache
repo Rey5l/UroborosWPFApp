@@ -16,5 +16,5 @@ C:\Users\user\source\repos\UroborosApp\UroborosApp\App.xaml
 58-288490015
 MainWindow.xaml;Pages\CategoriesPage.xaml;Pages\HomePage.xaml;Pages\LoginPage.xaml;Pages\RegisterPage.xaml;Utils\AddCategoryWindow.xaml;Utils\AddMaterialWindow.xaml;Utils\EditCategoryWindow.xaml;
 
-True
+False
 

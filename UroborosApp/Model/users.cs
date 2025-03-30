@@ -29,6 +29,10 @@ namespace UroborosApp.Model
         public string email { get; set; }
         public string password_hash { get; set; }
         public Nullable<System.DateTime> registration_date { get; set; }
+        public string avatar_url { get; set; }
+        public Nullable<System.DateTime> last_login { get; set; }
+        public string role { get; set; }
+        public bool is_active { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Achievements> Achievements { get; set; }

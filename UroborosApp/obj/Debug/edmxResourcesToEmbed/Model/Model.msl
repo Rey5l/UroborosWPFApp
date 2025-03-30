@@ -106,6 +106,10 @@
     <EntitySetMapping Name="users">
       <EntityTypeMapping TypeName="UroborosDBModel.users">
         <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="last_login" ColumnName="last_login" />
+          <ScalarProperty Name="avatar_url" ColumnName="avatar_url" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="email" ColumnName="email" />

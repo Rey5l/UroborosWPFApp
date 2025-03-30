@@ -50,7 +50,9 @@ namespace UroborosApp.Pages
         {
             try
             {
-                Materials = new ObservableCollection<Material>(_context.Material.ToList());
+                Materials = new ObservableCollection<Material>(
+                        _context.Material.Where(m => m.user_id == CurrentUser.Id)
+                    );
                 MaterialList.ItemsSource = Materials;
             }
             catch (Exception ex)

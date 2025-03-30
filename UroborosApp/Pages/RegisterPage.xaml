@@ -22,7 +22,6 @@
                                Margin="0,5,0,5"/>       
                     <TextBox x:Name="RegisterUsername" 
                              Margin="0,0,0,10"
-                             Style="{StaticResource RoundedTextBoxStyle}"
                              Padding="5"/>
 
                     <TextBlock Text="Email" 
@@ -30,7 +29,6 @@
                                Margin="0,5,0,5"/>       
                     <TextBox x:Name="RegisterEmail" 
                              Margin="0,0,0,10"
-                             Style="{StaticResource RoundedTextBoxStyle}"
                              Padding="5"/>
 
                     <TextBlock Text="Пароль" 
@@ -39,7 +37,6 @@
 
                     <PasswordBox x:Name="RegisterPassword" 
                                  Margin="0,0,0,10"
-                                 Style="{StaticResource RoundedPasswordBoxStyle}"
                                  Padding="5"/>
                     
                     <TextBlock Text="Повторите пароль" 
@@ -48,7 +45,6 @@
 
                     <PasswordBox x:Name="RepeatingPassword" 
                                  Margin="0,0,0,20"
-                                 Style="{StaticResource RoundedPasswordBoxStyle}"
                                  Padding="5"/>
 
                     <Button Content="Зарегистироваться" 

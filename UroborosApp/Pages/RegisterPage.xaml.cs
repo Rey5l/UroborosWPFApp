@@ -1,25 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
+using System.Linq;
+using System.Data.Entity;
 using UroborosApp.Model;
+using UroborosApp.Utils;
 
 namespace UroborosApp.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для RegisterPage.xaml
-    /// </summary>
     public partial class RegisterPage : Page
     {
         public RegisterPage()
@@ -27,84 +15,94 @@ namespace UroborosApp.Pages
             InitializeComponent();
         }
 
+        public RegistrationResult RegisterUser(string username, string email, string password, string repeatPassword)
+        {
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+                return new RegistrationResult(false, "Все поля должны быть заполнены");
+
+            if (username.Length < 5)
+                return new RegistrationResult(false, "Длина имени должна быть больше 5 символов");
+
+            if (username.Contains(" "))
+                return new RegistrationResult(false, "Имя пользователя не должно содержать пробелы");
+
+            if (email.Length < 5 || !email.Contains("@") || !email.Contains("."))
+                return new RegistrationResult(false, "Email введен некорректно");
+
+            if (password.Length < 8)
+                return new RegistrationResult(false, "Длина пароля должна быть больше 8 символов");
+
+            if (password != repeatPassword)
+                return new RegistrationResult(false, "Пароли не совпадают");
+
+            try
+            {
+                using (var db = new UroborosDBEntities())
+                {
+                    if (db.users.Any(u => u.email == email))
+                        return new RegistrationResult(false, "Пользователь с таким email уже существует");
+
+                    if (db.users.Any(u => u.name == username))
+                        return new RegistrationResult(false, "Пользователь с таким логином уже существует");
+
+                    var newUser = new users
+                    {
+                        name = username,
+                        email = email,
+                        password_hash = MainWindow.GetHash(password),
+                        registration_date = DateTime.Now,
+                        avatar_url = "/avatars/default.png",
+                        last_login = DateTime.Now,
+                        role = "user",
+                        is_active = true
+                    };
+
+                    db.users.Add(newUser);
+                    db.SaveChanges();
+
+                    return new RegistrationResult(true, "Вы успешно зарегистрировались!");
+                }
+            }
+            catch (Exception ex)
+            {
+                return new RegistrationResult(false, $"Ошибка регистрации: {ex.Message}");
+            }
+        }
+
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            if (RegisterUsername.Text.Length > 0)
+            var result = RegisterUser(
+                RegisterUsername.Text.Trim(),
+                RegisterEmail.Text.Trim(),
+                RegisterPassword.Password.Trim(),
+                RepeatingPassword.Password.Trim());
+
+            if (result.IsSuccess)
             {
-                string name = RegisterUsername.Text.Trim();
-                string email = RegisterEmail.Text.Trim();
-                string password = MainWindow.GetHash(RegisterPassword.Password.Trim());
-                string repeatPassword = MainWindow.GetHash(RepeatingPassword.Password.Trim());
-
-                if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
-                {
-                    MessageBox.Show("Все поля должны быть заполнены", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    return;
-                }
-
-                if (name.Length < 5)
-                {
-                    MessageBox.Show("Длина имени должна быть больше 5 символов", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    return;
-                }
-
-                if (email.Length < 5 || !email.Contains("@") || !email.Contains("."))
-                {
-                    MessageBox.Show("Email введен некорректно", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    return;
-                }
-
-                if (password.Length < 5)
-                {
-                    MessageBox.Show("Длина пароля должна быть больше 5 символов", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    return;
-                }
-
-                if (password != repeatPassword)
-                {
-                    MessageBox.Show("Пароли не совпадают", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    return;
-                }
-
-                using (var uroborosDB = new UroborosDBEntities())
-                {
-                    var existingUserEmail = uroborosDB.users.FirstOrDefault(u => u.email == email);
-                    if (existingUserEmail != null)
-                    {
-                        MessageBox.Show("Пользователь с таким email уже существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
-                        return;
-                    }
-
-                    var existingUserLogin = uroborosDB.users.FirstOrDefault(u => u.name == name);
-                    if (existingUserLogin != null)
-                    {
-                        MessageBox.Show("Пользователь с таким логином уже существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
-                        return;
-                    }
-                }
-
-                
-                UroborosDBEntities db = new UroborosDBEntities();
-                users userObject = new users
-                {
-                    name = name,
-                    email = email,
-                    password_hash = password,
-                    registration_date = DateTime.Now
-                };
-
-                db.users.Add(userObject);
-                db.SaveChanges();
-                MessageBox.Show("Вы успешно зарегистрировались!", "Успешно!", MessageBoxButton.OK);
+                MessageBox.Show(result.Message, "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
                 NavigationService.Navigate(new LoginPage());
-                
-
+            }
+            else
+            {
+                MessageBox.Show(result.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
         private void SwitchToLogin_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new LoginPage());
+        }
+    }
+
+    public class RegistrationResult
+    {
+        public bool IsSuccess { get; }
+        public string Message { get; }
+
+        public RegistrationResult(bool isSuccess, string message)
+        {
+            IsSuccess = isSuccess;
+            Message = message;
         }
     }
 }
