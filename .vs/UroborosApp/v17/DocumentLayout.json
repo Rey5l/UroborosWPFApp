@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|solutionrelative:uroborosapp\\pages\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|c:\\users\\user\\source\\repos\\uroborosapp\\uroborosapp\\model\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|C:\\Users\\user\\source\\repos\\UroborosApp\\uroborosapp\\model\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|solutionrelative:uroborosapp\\model\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -92,7 +92,7 @@
               "RelativeDocumentMoniker": "UroborosApp\\Pages\\HomePage.xaml.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Pages\\HomePage.xaml.cs",
               "RelativeToolTip": "UroborosApp\\Pages\\HomePage.xaml.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAcwIUAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAmwIUAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-24T14:01:07.81Z",
               "EditorCaption": ""
@@ -107,8 +107,7 @@
               "RelativeToolTip": "UroborosApp\\Model\\Tasks.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T21:15:58.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T21:15:58.192Z"
             },
             {
               "$type": "Document",
