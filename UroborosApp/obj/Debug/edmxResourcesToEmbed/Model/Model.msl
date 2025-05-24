@@ -1,19 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище UroborosDBModelContainer" CdmEntityContainer="UroborosDBEntities">
-    <EntitySetMapping Name="Achievements">
-      <EntityTypeMapping TypeName="UroborosDBModel.Achievements">
-        <MappingFragment StoreEntitySet="Achievements">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="user_id" ColumnName="user_id" />
-          <ScalarProperty Name="title" ColumnName="title" />
-          <ScalarProperty Name="description" ColumnName="description" />
-          <ScalarProperty Name="earned_date" ColumnName="earned_date" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
+  <EntityContainerMapping StorageEntityContainer="Хранилище UroborosDBNew3ModelContainer" CdmEntityContainer="Entities">
     <EntitySetMapping Name="Activity_Log">
-      <EntityTypeMapping TypeName="UroborosDBModel.Activity_Log">
+      <EntityTypeMapping TypeName="UroborosDBNew3Model.Activity_Log">
         <MappingFragment StoreEntitySet="Activity_Log">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="user_id" ColumnName="user_id" />
@@ -22,8 +11,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Learning_Goals">
+      <EntityTypeMapping TypeName="UroborosDBNew3Model.Learning_Goals">
+        <MappingFragment StoreEntitySet="Learning_Goals">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="User_id" ColumnName="User_id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Target_Date" ColumnName="Target_Date" />
+          <ScalarProperty Name="Is_completed" ColumnName="Is_completed" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Learning_Statistics">
-      <EntityTypeMapping TypeName="UroborosDBModel.Learning_Statistics">
+      <EntityTypeMapping TypeName="UroborosDBNew3Model.Learning_Statistics">
         <MappingFragment StoreEntitySet="Learning_Statistics">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="user_id" ColumnName="user_id" />
@@ -33,7 +35,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Mastery_Level">
-      <EntityTypeMapping TypeName="UroborosDBModel.Mastery_Level">
+      <EntityTypeMapping TypeName="UroborosDBNew3Model.Mastery_Level">
         <MappingFragment StoreEntitySet="Mastery_Level">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="material_id" ColumnName="material_id" />
@@ -43,7 +45,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Material">
-      <EntityTypeMapping TypeName="UroborosDBModel.Material">
+      <EntityTypeMapping TypeName="UroborosDBNew3Model.Material">
         <MappingFragment StoreEntitySet="Material">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="user_id" ColumnName="user_id" />
@@ -56,16 +58,17 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Material_Category">
-      <EntityTypeMapping TypeName="UroborosDBModel.Material_Category">
+      <EntityTypeMapping TypeName="UroborosDBNew3Model.Material_Category">
         <MappingFragment StoreEntitySet="Material_Category">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Reminder">
-      <EntityTypeMapping TypeName="UroborosDBModel.Reminder">
+      <EntityTypeMapping TypeName="UroborosDBNew3Model.Reminder">
         <MappingFragment StoreEntitySet="Reminder">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="user_id" ColumnName="user_id" />
@@ -75,7 +78,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Repetition">
-      <EntityTypeMapping TypeName="UroborosDBModel.Repetition">
+      <EntityTypeMapping TypeName="UroborosDBNew3Model.Repetition">
         <MappingFragment StoreEntitySet="Repetition">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="material_id" ColumnName="material_id" />
@@ -84,17 +87,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Repetition_Schedule">
-      <EntityTypeMapping TypeName="UroborosDBModel.Repetition_Schedule">
-        <MappingFragment StoreEntitySet="Repetition_Schedule">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="material_id" ColumnName="material_id" />
-          <ScalarProperty Name="next_repetition_date" ColumnName="next_repetition_date" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Tasks">
-      <EntityTypeMapping TypeName="UroborosDBModel.Tasks">
+      <EntityTypeMapping TypeName="UroborosDBNew3Model.Tasks">
         <MappingFragment StoreEntitySet="Tasks">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="material_id" ColumnName="material_id" />
@@ -104,17 +98,17 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="users">
-      <EntityTypeMapping TypeName="UroborosDBModel.users">
+      <EntityTypeMapping TypeName="UroborosDBNew3Model.users">
         <MappingFragment StoreEntitySet="users">
-          <ScalarProperty Name="is_active" ColumnName="is_active" />
-          <ScalarProperty Name="role" ColumnName="role" />
-          <ScalarProperty Name="last_login" ColumnName="last_login" />
-          <ScalarProperty Name="avatar_url" ColumnName="avatar_url" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="password_hash" ColumnName="password_hash" />
           <ScalarProperty Name="registration_date" ColumnName="registration_date" />
+          <ScalarProperty Name="avatar_url" ColumnName="avatar_url" />
+          <ScalarProperty Name="last_login" ColumnName="last_login" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

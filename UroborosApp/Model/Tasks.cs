@@ -11,9 +11,31 @@ namespace UroborosApp.Model
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class Tasks
+    using System.ComponentModel;
+
+    public partial class Tasks : INotifyPropertyChanged
     {
+
+
+        private bool _isAnswerVisible;
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        public bool IsAnswerVisible
+        {
+            get { return _isAnswerVisible; }
+            set
+            {
+                if (_isAnswerVisible != value)
+                {
+                    _isAnswerVisible = value;
+                    OnPropertyChanged(nameof(IsAnswerVisible));
+                }
+            }
+        }
+
         public int id { get; set; }
         public int material_id { get; set; }
         public string question { get; set; }

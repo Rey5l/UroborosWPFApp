@@ -1,0 +1,30 @@
+﻿<Window x:Class="UroborosApp.Utils.RecallScoreDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Оцените запоминание" 
+        Width="300"
+        SizeToContent="Height"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner">
+    <StackPanel Margin="15">
+        <TextBlock Text="Насколько хорошо вы помните материал?" 
+                  TextWrapping="Wrap"
+                  Margin="0,0,0,10"/>
+
+        <UniformGrid Columns="5" Margin="0,10">
+            <RadioButton x:Name="Score1" Style="{StaticResource RadioButtonStyle}" GroupName="RecallScore" Content="1" Tag="1" 
+                        ToolTip="Совсем не помню" />
+            <RadioButton x:Name="Score2" Style="{StaticResource RadioButtonStyle}" GroupName="RecallScore" Content="2" Tag="2" 
+                        ToolTip="Плохо" />
+            <RadioButton x:Name="Score3" Style="{StaticResource RadioButtonStyle}" GroupName="RecallScore" Content="3" Tag="3" 
+                        ToolTip="Нормально"  IsChecked="True"/>
+            <RadioButton x:Name="Score4" Style="{StaticResource RadioButtonStyle}" GroupName="RecallScore" Content="4" Tag="4" 
+                        ToolTip="Хорошо" />
+            <RadioButton x:Name="Score5" Style="{StaticResource RadioButtonStyle}" GroupName="RecallScore" Content="5" Tag="5" 
+                        ToolTip="Отлично" />
+        </UniformGrid>
+
+        <Button Content="Подтвердить" Click="Confirm_Click" 
+               HorizontalAlignment="Right" Margin="0,15,0,0"/>
+    </StackPanel>
+</Window>

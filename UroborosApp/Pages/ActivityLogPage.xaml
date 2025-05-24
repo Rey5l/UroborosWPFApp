@@ -1,0 +1,80 @@
+﻿<Page x:Class="UroborosApp.Pages.ActivityLogPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:UroborosApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="1200"
+      Title="Журнал активности"
+      Background="White">
+
+    <Grid>
+        <!-- Навигационная панель -->
+        <DockPanel HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto">
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" Margin="10">
+                <TextBlock Text="Uroboros" FontSize="23" VerticalAlignment="Center" FontWeight="Bold"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Content="Home" Style="{StaticResource NavButtonStyle}" Click="NavigateToHomePage"/>
+                <Button Content="Category" Style="{StaticResource NavButtonStyle}" Click="NavigateToCategoriesPage"/>
+                <Button Content="Reminder" Style="{StaticResource NavButtonStyle}" Click="NavigateToReminderPage"/>
+                <Button Content="ReviewSchedule" Style="{StaticResource NavButtonStyle}" Click="NavigateToReviewSchedulePage"/>
+                <Button Content="Progress" Style="{StaticResource NavButtonStyle}" Click="NavigateToProgressPage"/>
+                <Button Content="Statistics" Style="{StaticResource NavButtonStyle}" Click="NavigateToStatisticsPage"/>
+                <Button Content="Tasks" Style="{StaticResource NavButtonStyle}" Click="NavigateToTasksPage"/>
+                <Button Content="ActivityLog" Style="{StaticResource NavButtonActiveStyle}"/>
+                <Button Content="LearningGoals" Click="NavigateToLearningGoalsPage" Style="{StaticResource NavButtonStyle}" FontFamily="{StaticResource MainFont}" />
+                <Button Content="Profile" Style="{StaticResource NavButtonStyle}" Click="NavigateToProfilePage"/>
+            </StackPanel>
+        </DockPanel>
+
+        <Grid Margin="10,50,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock Text="Журнал активности" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"/>
+                <Button Content="Обновить" Click="RefreshData_Click" Margin="10, 0, 0, 0"/>
+                <Button Content="Очистить всё" Click="DeleteData_Click" Margin="10, 0, 0, 0" />
+            </StackPanel>
+
+            <ListView x:Name="ActivityLogList" Grid.Row="1" Margin="0,20,0,0" BorderThickness="1" BorderBrush="Gray">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="Height" Value="40"/>
+                        <Setter Property="FontSize" Value="14"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ID" Width="50">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding id}" FontSize="14"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Дата и время" Width="200">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding log_datetime, StringFormat='{}{0:dd.MM.yyyy HH:mm}', FallbackValue='Не указано'}" FontSize="14"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Действие" Width="500">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding action}" FontSize="14"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+    </Grid>
+</Page>

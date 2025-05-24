@@ -20,7 +20,6 @@ namespace UroborosApp.Model
             this.Mastery_Level = new HashSet<Mastery_Level>();
             this.Reminder = new HashSet<Reminder>();
             this.Repetition = new HashSet<Repetition>();
-            this.Repetition_Schedule = new HashSet<Repetition_Schedule>();
             this.Tasks = new HashSet<Tasks>();
         }
     
@@ -39,8 +38,6 @@ namespace UroborosApp.Model
         public virtual ICollection<Reminder> Reminder { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Repetition> Repetition { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Repetition_Schedule> Repetition_Schedule { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tasks> Tasks { get; set; }
         public virtual Material_Category Material_Category { get; set; }

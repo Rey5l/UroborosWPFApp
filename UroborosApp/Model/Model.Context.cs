@@ -13,27 +13,38 @@ namespace UroborosApp.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class UroborosDBEntities : DbContext
+    public partial class Entities : DbContext
     {
-        public UroborosDBEntities()
-            : base("name=UroborosDBEntities")
+        public Entities()
+            : base("name=Entities")
         {
         }
-    
+
+        private static Entities _context;
+        public static Entities GetContext()
+        {
+            if (_context == null)
+            {
+                _context = new Entities();
+            }
+
+            return _context;
+        }
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Achievements> Achievements { get; set; }
         public virtual DbSet<Activity_Log> Activity_Log { get; set; }
+        public virtual DbSet<Learning_Goals> Learning_Goals { get; set; }
         public virtual DbSet<Learning_Statistics> Learning_Statistics { get; set; }
         public virtual DbSet<Mastery_Level> Mastery_Level { get; set; }
         public virtual DbSet<Material> Material { get; set; }
         public virtual DbSet<Material_Category> Material_Category { get; set; }
         public virtual DbSet<Reminder> Reminder { get; set; }
         public virtual DbSet<Repetition> Repetition { get; set; }
-        public virtual DbSet<Repetition_Schedule> Repetition_Schedule { get; set; }
         public virtual DbSet<Tasks> Tasks { get; set; }
         public virtual DbSet<users> users { get; set; }
     }

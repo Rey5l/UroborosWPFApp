@@ -3,28 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\UroborosApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|c:\\users\\user\\source\\repos\\uroborosapp\\uroborosapp\\pages\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|c:\\users\\user\\source\\repos\\uroborosapp\\uroborosapp\\model\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|solutionrelative:uroborosapp\\model\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|C:\\Users\\user\\source\\repos\\UroborosApp\\uroborosapp\\model\\model.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|solutionrelative:uroborosapp\\model\\model.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|c:\\users\\user\\source\\repos\\uroborosapp\\uroborosapp\\pages\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|solutionrelative:uroborosapp\\pages\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|c:\\users\\user\\source\\repos\\uroborosapp\\uroborosapp\\pages\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|solutionrelative:uroborosapp\\pages\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|C:\\Users\\user\\source\\repos\\UroborosApp\\uroborosapp\\utils\\addmaterialwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|solutionrelative:uroborosapp\\utils\\addmaterialwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|C:\\Users\\user\\source\\repos\\UroborosApp\\uroborosapp\\utils\\addmaterialwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|solutionrelative:uroborosapp\\utils\\addmaterialwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|C:\\Users\\user\\source\\repos\\UroborosApp\\uroborosapp\\pages\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|solutionrelative:uroborosapp\\pages\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{590C072A-E3F0-47A0-87A4-9D55A47A5109}|UnitTestProject1\\UnitTestProject1.csproj|c:\\users\\user\\source\\repos\\uroborosapp\\unittestproject1\\registrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590C072A-E3F0-47A0-87A4-9D55A47A5109}|UnitTestProject1\\UnitTestProject1.csproj|solutionrelative:unittestproject1\\registrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|C:\\Users\\user\\source\\repos\\UroborosApp\\uroborosapp\\pages\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|solutionrelative:uroborosapp\\pages\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{590C072A-E3F0-47A0-87A4-9D55A47A5109}|UnitTestProject1\\UnitTestProject1.csproj|c:\\users\\user\\source\\repos\\uroborosapp\\unittestproject1\\logintests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590C072A-E3F0-47A0-87A4-9D55A47A5109}|UnitTestProject1\\UnitTestProject1.csproj|solutionrelative:unittestproject1\\logintests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|c:\\users\\user\\source\\repos\\uroborosapp\\uroborosapp\\pages\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|C:\\Users\\user\\source\\repos\\UroborosApp\\uroborosapp\\pages\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|solutionrelative:uroborosapp\\pages\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{590C072A-E3F0-47A0-87A4-9D55A47A5109}|UnitTestProject1\\UnitTestProject1.csproj|c:\\users\\user\\source\\repos\\uroborosapp\\unittestproject1\\negativeauthtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590C072A-E3F0-47A0-87A4-9D55A47A5109}|UnitTestProject1\\UnitTestProject1.csproj|solutionrelative:unittestproject1\\negativeauthtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|C:\\Users\\user\\source\\repos\\UroborosApp\\uroborosapp\\pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|solutionrelative:uroborosapp\\pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{590C072A-E3F0-47A0-87A4-9D55A47A5109}|UnitTestProject1\\UnitTestProject1.csproj|c:\\users\\user\\source\\repos\\uroborosapp\\unittestproject1\\unittest3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590C072A-E3F0-47A0-87A4-9D55A47A5109}|UnitTestProject1\\UnitTestProject1.csproj|solutionrelative:unittestproject1\\unittest3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|C:\\Users\\user\\source\\repos\\UroborosApp\\uroborosapp\\model\\model.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|solutionrelative:uroborosapp\\model\\model.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|C:\\Users\\user\\source\\repos\\UroborosApp\\uroborosapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{55D2ABCA-6C41-4635-9FA3-633698E7FE1F}|UroborosApp\\UroborosApp.csproj|solutionrelative:uroborosapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,21 +58,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginTests.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UnitTestProject1\\LoginTests.cs",
-              "RelativeDocumentMoniker": "UnitTestProject1\\LoginTests.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UnitTestProject1\\LoginTests.cs",
-              "RelativeToolTip": "UnitTestProject1\\LoginTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T17:31:23.474Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
@@ -71,68 +82,144 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegistrationTests.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UnitTestProject1\\RegistrationTests.cs",
-              "RelativeDocumentMoniker": "UnitTestProject1\\RegistrationTests.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UnitTestProject1\\RegistrationTests.cs",
-              "RelativeToolTip": "UnitTestProject1\\RegistrationTests.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAYwIwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T16:56:59.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RegisterPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Pages\\RegisterPage.xaml.cs",
-              "RelativeDocumentMoniker": "UroborosApp\\Pages\\RegisterPage.xaml.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Pages\\RegisterPage.xaml.cs*",
-              "RelativeToolTip": "UroborosApp\\Pages\\RegisterPage.xaml.cs*",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB8AAAAjAAAAAAAAAA==",
+              "Title": "Tasks.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Model\\Tasks.cs",
+              "RelativeDocumentMoniker": "UroborosApp\\Model\\Tasks.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Model\\Tasks.cs",
+              "RelativeToolTip": "UroborosApp\\Model\\Tasks.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAiwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T16:46:00.232Z",
+              "WhenOpened": "2025-05-22T21:15:58.192Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NegativeAuthTests.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UnitTestProject1\\NegativeAuthTests.cs",
-              "RelativeDocumentMoniker": "UnitTestProject1\\NegativeAuthTests.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UnitTestProject1\\NegativeAuthTests.cs",
-              "RelativeToolTip": "UnitTestProject1\\NegativeAuthTests.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAowDEAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T16:30:34.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UnitTest3.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UnitTestProject1\\UnitTest3.cs",
-              "RelativeDocumentMoniker": "UnitTestProject1\\UnitTest3.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UnitTestProject1\\UnitTest3.cs",
-              "RelativeToolTip": "UnitTestProject1\\UnitTest3.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAwwC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T16:15:53.732Z",
+              "DocumentIndex": 2,
+              "Title": "ProfilePage.xaml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Pages\\ProfilePage.xaml",
+              "RelativeDocumentMoniker": "UroborosApp\\Pages\\ProfilePage.xaml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Pages\\ProfilePage.xaml",
+              "RelativeToolTip": "UroborosApp\\Pages\\ProfilePage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-22T21:13:47.971Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "HomePage.xaml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Pages\\HomePage.xaml",
+              "RelativeDocumentMoniker": "UroborosApp\\Pages\\HomePage.xaml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Pages\\HomePage.xaml",
+              "RelativeToolTip": "UroborosApp\\Pages\\HomePage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T18:41:45.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddMaterialWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Utils\\AddMaterialWindow.xaml.cs",
+              "RelativeDocumentMoniker": "UroborosApp\\Utils\\AddMaterialWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Utils\\AddMaterialWindow.xaml.cs",
+              "RelativeToolTip": "UroborosApp\\Utils\\AddMaterialWindow.xaml.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAiwGMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:41:14.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddMaterialWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Utils\\AddMaterialWindow.xaml",
+              "RelativeDocumentMoniker": "UroborosApp\\Utils\\AddMaterialWindow.xaml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Utils\\AddMaterialWindow.xaml",
+              "RelativeToolTip": "UroborosApp\\Utils\\AddMaterialWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T18:39:51.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Pages\\RegisterPage.xaml.cs",
+              "RelativeDocumentMoniker": "UroborosApp\\Pages\\RegisterPage.xaml.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Pages\\RegisterPage.xaml.cs",
+              "RelativeToolTip": "UroborosApp\\Pages\\RegisterPage.xaml.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAADwv28AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:18:42.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RegisterPage.xaml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Pages\\RegisterPage.xaml",
+              "RelativeDocumentMoniker": "UroborosApp\\Pages\\RegisterPage.xaml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Pages\\RegisterPage.xaml",
+              "RelativeToolTip": "UroborosApp\\Pages\\RegisterPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T18:17:45.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "LoginPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Pages\\LoginPage.xaml.cs",
               "RelativeDocumentMoniker": "UroborosApp\\Pages\\LoginPage.xaml.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Pages\\LoginPage.xaml.cs",
               "RelativeToolTip": "UroborosApp\\Pages\\LoginPage.xaml.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAkwDEAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAxwDcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T14:29:08.193Z",
+              "WhenOpened": "2025-05-20T18:16:08.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Pages\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "UroborosApp\\Pages\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Pages\\LoginPage.xaml",
+              "RelativeToolTip": "UroborosApp\\Pages\\LoginPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T18:14:12.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Model.Context.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Model\\Model.Context.cs",
+              "RelativeDocumentMoniker": "UroborosApp\\Model\\Model.Context.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Model\\Model.Context.cs",
+              "RelativeToolTip": "UroborosApp\\Model\\Model.Context.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:10:17.595Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Model.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Model\\Model.edmx",
+              "RelativeDocumentMoniker": "UroborosApp\\Model\\Model.edmx",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\Model\\Model.edmx [Diagram1]",
+              "RelativeToolTip": "UroborosApp\\Model\\Model.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-05-20T18:03:00.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "UroborosApp\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\UroborosApp\\UroborosApp\\MainWindow.xaml",
+              "RelativeToolTip": "UroborosApp\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-12T21:39:35.303Z"
             }
           ]
         }

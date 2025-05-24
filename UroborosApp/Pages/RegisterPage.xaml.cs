@@ -5,6 +5,8 @@ using System.Linq;
 using System.Data.Entity;
 using UroborosApp.Model;
 using UroborosApp.Utils;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Data.Entity.Infrastructure;
 
 namespace UroborosApp.Pages
 {
@@ -37,7 +39,7 @@ namespace UroborosApp.Pages
 
             try
             {
-                using (var db = new UroborosDBEntities())
+                using (var db = new Entities())
                 {
                     if (db.users.Any(u => u.email == email))
                         return new RegistrationResult(false, "Пользователь с таким email уже существует");
@@ -53,7 +55,7 @@ namespace UroborosApp.Pages
                         registration_date = DateTime.Now,
                         avatar_url = "/avatars/default.png",
                         last_login = DateTime.Now,
-                        role = "user",
+                        role = "User",
                         is_active = true
                     };
 
@@ -63,9 +65,11 @@ namespace UroborosApp.Pages
                     return new RegistrationResult(true, "Вы успешно зарегистрировались!");
                 }
             }
-            catch (Exception ex)
+            catch (DbUpdateException ex)
             {
-                return new RegistrationResult(false, $"Ошибка регистрации: {ex.Message}");
+                var innerEx = ex.InnerException?.InnerException ?? ex.InnerException;
+                Console.WriteLine(innerEx?.Message);
+                return new RegistrationResult(false, $"Ошибка регистрации: {innerEx?.Message}");
             }
         }
 

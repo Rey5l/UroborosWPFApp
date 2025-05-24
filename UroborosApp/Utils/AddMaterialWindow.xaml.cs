@@ -21,11 +21,11 @@ namespace UroborosApp.Utils
     /// </summary>
     public partial class AddMaterialWindow : Window
     {
-        private UroborosDBEntities _context;
+        private Entities _context;
 
         public AddMaterialWindow()
         {
-            _context = new UroborosDBEntities();
+            _context = Entities.GetContext();
             InitializeComponent();
             LoadCategories();
         }
@@ -34,7 +34,7 @@ namespace UroborosApp.Utils
         {
             try
             {
-                var categories = _context.Material_Category.ToList();
+                var categories = _context.Material_Category.Where(c => c.user_id == CurrentUser.Id).ToList();
                 CategoryComboBox.ItemsSource = categories;
             }
             catch (Exception ex)
@@ -72,6 +72,13 @@ namespace UroborosApp.Utils
             try
             {
                 _context.Material.Add(newMaterial);
+                var mastery = new Mastery_Level
+                {
+                    material_id = newMaterial.id,
+                    level = "1", 
+                    last_updated = DateTime.Now
+                };
+                _context.Mastery_Level.Add(mastery);
                 _context.SaveChanges();
 
                 DialogResult = true;

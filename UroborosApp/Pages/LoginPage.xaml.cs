@@ -52,7 +52,7 @@ namespace UroborosApp.Pages
 
             password = MainWindow.GetHash(password);
 
-            using (var db = new UroborosDBEntities())
+            using (var db = new Entities())
             {
                 var currentUser = db.users.FirstOrDefault(u => u.name == login && u.password_hash == password);
 
@@ -61,7 +61,7 @@ namespace UroborosApp.Pages
                     CurrentUser.Id = currentUser.id;
                     CurrentUser.Username = currentUser.name;
                     CurrentUser.Email = currentUser.email;
-                    //NavigationService.Navigate(new HomePage());
+                    NavigationService.Navigate(new HomePage());
                     return true;
                 }
                 else

@@ -17,8 +17,8 @@ namespace UroborosApp.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public users()
         {
-            this.Achievements = new HashSet<Achievements>();
             this.Activity_Log = new HashSet<Activity_Log>();
+            this.Learning_Goals = new HashSet<Learning_Goals>();
             this.Learning_Statistics = new HashSet<Learning_Statistics>();
             this.Material = new HashSet<Material>();
             this.Reminder = new HashSet<Reminder>();
@@ -35,9 +35,9 @@ namespace UroborosApp.Model
         public bool is_active { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Achievements> Achievements { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Activity_Log> Activity_Log { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Learning_Goals> Learning_Goals { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Learning_Statistics> Learning_Statistics { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -8,6 +8,14 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="LoginPage">
 
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
     <Grid Background="White">
         <Grid VerticalAlignment="Center">
             <Grid Margin="15">
@@ -20,7 +28,8 @@
                     <TextBlock Text="Имя" 
                                FontSize="16"
                                Margin="0,5,0,5"/>
-                    <TextBox x:Name="LoginUsername" 
+                    <TextBox x:Name="LoginUsername"
+                             Style="{StaticResource RoundedTextBoxStyle}"
                              Margin="0,0,0,10"
                              
                              Padding="5"/>
@@ -29,22 +38,22 @@
                                FontSize="16"
                                Margin="0,5,0,5"/>
 
-                    <PasswordBox x:Name="LoginPassword" 
+                    <PasswordBox x:Name="LoginPassword"
+                                 Style="{StaticResource RoundedPasswordBoxStyle}"
                                  Margin="0,0,0,20"
                                  Padding="5"/>
 
                     <Button Content="Войти" 
                             Click="Login_Click"
                             Padding="10"
-                            Margin="0,0,0,10"/>     
+                            Margin="0,0,0,10"/>
 
                     <TextBlock Text="Ещё нет аккаунта? " 
                                HorizontalAlignment="Center" >
                         <Hyperlink Click="SwitchToRegister_Click">
                             Зарегистрироваться
-                        </Hyperlink>    
+                        </Hyperlink>
                     </TextBlock>
-
                 </StackPanel>
             </Grid>
         </Grid>

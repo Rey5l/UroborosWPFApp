@@ -4,29 +4,27 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f42a9fe927b544ff8d43af544a3929c7" Name="Diagram1" ZoomLevel="111">
-        <EntityTypeShape EntityType="UroborosDBModel.Achievements" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="UroborosDBModel.Activity_Log" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="UroborosDBModel.Learning_Statistics" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="UroborosDBModel.Mastery_Level" Width="1.5" PointX="8.25" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="UroborosDBModel.Material" Width="1.5" PointX="6" PointY="10.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="UroborosDBModel.Material_Category" Width="1.5" PointX="3.75" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="UroborosDBModel.Reminder" Width="1.5" PointX="11.25" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="UroborosDBModel.Repetition" Width="1.5" PointX="8.25" PointY="13.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="UroborosDBModel.Repetition_Schedule" Width="1.5" PointX="8.25" PointY="15.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="UroborosDBModel.Tasks" Width="1.5" PointX="8.25" PointY="18.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="UroborosDBModel.users" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
-        <AssociationConnector Association="UroborosDBModel.FK__Achieveme__user___70DDC3D8" ManuallyRouted="false" />
-        <AssociationConnector Association="UroborosDBModel.FK__Activity___user___6D0D32F4" ManuallyRouted="false" />
-        <AssociationConnector Association="UroborosDBModel.FK__Learning___user___693CA210" ManuallyRouted="false" />
-        <AssociationConnector Association="UroborosDBModel.FK__Mastery_L__mater__6477ECF3" ManuallyRouted="false" />
-        <AssociationConnector Association="UroborosDBModel.FK__Material__user_i__49C3F6B7" ManuallyRouted="false" />
-        <AssociationConnector Association="UroborosDBModel.FK__Reminder__materi__5DCAEF64" ManuallyRouted="false" />
-        <AssociationConnector Association="UroborosDBModel.FK__Repetitio__mater__4D94879B" ManuallyRouted="false" />
-        <AssociationConnector Association="UroborosDBModel.FK__Repetitio__mater__5165187F" ManuallyRouted="false" />
-        <AssociationConnector Association="UroborosDBModel.FK__Tasks__material___73BA3083" ManuallyRouted="false" />
-        <AssociationConnector Association="UroborosDBModel.FK_Material_Category" ManuallyRouted="false" />
-        <AssociationConnector Association="UroborosDBModel.FK__Reminder__user_i__5CD6CB2B" ManuallyRouted="false" />
+      <Diagram DiagramId="6ddb923ee0fc4a529430b471b949e496" Name="Diagram1" ZoomLevel="52">
+        <EntityTypeShape EntityType="UroborosDBNew3Model.Activity_Log" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="UroborosDBNew3Model.Learning_Goals" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="UroborosDBNew3Model.Learning_Statistics" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="UroborosDBNew3Model.Mastery_Level" Width="1.5" PointX="8.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="UroborosDBNew3Model.Material" Width="1.5" PointX="6" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="UroborosDBNew3Model.Material_Category" Width="1.5" PointX="3.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="UroborosDBNew3Model.Reminder" Width="1.5" PointX="11.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="UroborosDBNew3Model.Repetition" Width="1.5" PointX="8.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="UroborosDBNew3Model.Tasks" Width="1.5" PointX="8.25" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="UroborosDBNew3Model.users" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <AssociationConnector Association="UroborosDBNew3Model.FK__Activity___user___571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="UroborosDBNew3Model.FK_Learning_Goals_users" ManuallyRouted="false" />
+        <AssociationConnector Association="UroborosDBNew3Model.FK__Learning___user___5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="UroborosDBNew3Model.FK__Mastery_L__mater__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="UroborosDBNew3Model.FK__Material__user_i__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="UroborosDBNew3Model.FK__Reminder__materi__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="UroborosDBNew3Model.FK__Repetitio__mater__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="UroborosDBNew3Model.FK__Tasks__material___5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="UroborosDBNew3Model.FK_Material_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="UroborosDBNew3Model.FK__Reminder__user_i__5BE2A6F2" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

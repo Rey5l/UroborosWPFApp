@@ -1,16 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="UroborosDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="Achievements">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="user_id" Type="Int32" Nullable="false" />
-    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="earned_date" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="users" Relationship="Self.FK__Achieveme__user___70DDC3D8" FromRole="Achievements" ToRole="users" />
-  </EntityType>
+<Schema Namespace="UroborosDBNew3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Activity_Log">
     <Key>
       <PropertyRef Name="id" />
@@ -19,7 +8,20 @@
     <Property Name="user_id" Type="Int32" Nullable="false" />
     <Property Name="log_datetime" Type="DateTime" Precision="3" />
     <Property Name="action" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="users" Relationship="Self.FK__Activity___user___6D0D32F4" FromRole="Activity_Log" ToRole="users" />
+    <NavigationProperty Name="users" Relationship="Self.FK__Activity___user___571DF1D5" FromRole="Activity_Log" ToRole="users" />
+  </EntityType>
+  <EntityType Name="Learning_Goals">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_id" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Target_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_completed" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="users" Relationship="Self.FK_Learning_Goals_users" FromRole="Learning_Goals" ToRole="users" />
   </EntityType>
   <EntityType Name="Learning_Statistics">
     <Key>
@@ -29,7 +31,7 @@
     <Property Name="user_id" Type="Int32" Nullable="false" />
     <Property Name="total_materials_learned" Type="Int32" />
     <Property Name="avg_recall_score" Type="Double" />
-    <NavigationProperty Name="users" Relationship="Self.FK__Learning___user___693CA210" FromRole="Learning_Statistics" ToRole="users" />
+    <NavigationProperty Name="users" Relationship="Self.FK__Learning___user___5812160E" FromRole="Learning_Statistics" ToRole="users" />
   </EntityType>
   <EntityType Name="Mastery_Level">
     <Key>
@@ -39,7 +41,7 @@
     <Property Name="material_id" Type="Int32" Nullable="false" />
     <Property Name="level" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="last_updated" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="Material" Relationship="Self.FK__Mastery_L__mater__6477ECF3" FromRole="Mastery_Level" ToRole="Material" />
+    <NavigationProperty Name="Material" Relationship="Self.FK__Mastery_L__mater__59063A47" FromRole="Mastery_Level" ToRole="Material" />
   </EntityType>
   <EntityType Name="Material">
     <Key>
@@ -52,12 +54,11 @@
     <Property Name="category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="created_at" Type="DateTime" Precision="3" />
     <Property Name="category_id" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Mastery_Level" Relationship="Self.FK__Mastery_L__mater__6477ECF3" FromRole="Material" ToRole="Mastery_Level" />
-    <NavigationProperty Name="users" Relationship="Self.FK__Material__user_i__49C3F6B7" FromRole="Material" ToRole="users" />
-    <NavigationProperty Name="Reminder" Relationship="Self.FK__Reminder__materi__5DCAEF64" FromRole="Material" ToRole="Reminder" />
-    <NavigationProperty Name="Repetition" Relationship="Self.FK__Repetitio__mater__4D94879B" FromRole="Material" ToRole="Repetition" />
-    <NavigationProperty Name="Repetition_Schedule" Relationship="Self.FK__Repetitio__mater__5165187F" FromRole="Material" ToRole="Repetition_Schedule" />
-    <NavigationProperty Name="Tasks" Relationship="Self.FK__Tasks__material___73BA3083" FromRole="Material" ToRole="Tasks" />
+    <NavigationProperty Name="Mastery_Level" Relationship="Self.FK__Mastery_L__mater__59063A47" FromRole="Material" ToRole="Mastery_Level" />
+    <NavigationProperty Name="users" Relationship="Self.FK__Material__user_i__59FA5E80" FromRole="Material" ToRole="users" />
+    <NavigationProperty Name="Reminder" Relationship="Self.FK__Reminder__materi__5CD6CB2B" FromRole="Material" ToRole="Reminder" />
+    <NavigationProperty Name="Repetition" Relationship="Self.FK__Repetitio__mater__5DCAEF64" FromRole="Material" ToRole="Repetition" />
+    <NavigationProperty Name="Tasks" Relationship="Self.FK__Tasks__material___5FB337D6" FromRole="Material" ToRole="Tasks" />
     <NavigationProperty Name="Material_Category" Relationship="Self.FK_Material_Category" FromRole="Material" ToRole="Material_Category" />
   </EntityType>
   <EntityType Name="Material_Category">
@@ -67,6 +68,7 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="user_id" Type="Int32" />
     <NavigationProperty Name="Material" Relationship="Self.FK_Material_Category" FromRole="Material_Category" ToRole="Material" />
   </EntityType>
   <EntityType Name="Reminder">
@@ -77,8 +79,8 @@
     <Property Name="user_id" Type="Int32" Nullable="false" />
     <Property Name="material_id" Type="Int32" Nullable="false" />
     <Property Name="reminder_datetime" Type="DateTime" Nullable="false" Precision="3" />
-    <NavigationProperty Name="Material" Relationship="Self.FK__Reminder__materi__5DCAEF64" FromRole="Reminder" ToRole="Material" />
-    <NavigationProperty Name="users" Relationship="Self.FK__Reminder__user_i__5CD6CB2B" FromRole="Reminder" ToRole="users" />
+    <NavigationProperty Name="Material" Relationship="Self.FK__Reminder__materi__5CD6CB2B" FromRole="Reminder" ToRole="Material" />
+    <NavigationProperty Name="users" Relationship="Self.FK__Reminder__user_i__5BE2A6F2" FromRole="Reminder" ToRole="users" />
   </EntityType>
   <EntityType Name="Repetition">
     <Key>
@@ -88,16 +90,7 @@
     <Property Name="material_id" Type="Int32" />
     <Property Name="repetition_date" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="recall_score" Type="Int32" />
-    <NavigationProperty Name="Material" Relationship="Self.FK__Repetitio__mater__4D94879B" FromRole="Repetition" ToRole="Material" />
-  </EntityType>
-  <EntityType Name="Repetition_Schedule">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="material_id" Type="Int32" />
-    <Property Name="next_repetition_date" Type="DateTime" Nullable="false" Precision="3" />
-    <NavigationProperty Name="Material" Relationship="Self.FK__Repetitio__mater__5165187F" FromRole="Repetition_Schedule" ToRole="Material" />
+    <NavigationProperty Name="Material" Relationship="Self.FK__Repetitio__mater__5DCAEF64" FromRole="Repetition" ToRole="Material" />
   </EntityType>
   <EntityType Name="Tasks">
     <Key>
@@ -107,7 +100,7 @@
     <Property Name="material_id" Type="Int32" Nullable="false" />
     <Property Name="question" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="answer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Material" Relationship="Self.FK__Tasks__material___73BA3083" FromRole="Tasks" ToRole="Material" />
+    <NavigationProperty Name="Material" Relationship="Self.FK__Tasks__material___5FB337D6" FromRole="Tasks" ToRole="Material" />
   </EntityType>
   <EntityType Name="users">
     <Key>
@@ -118,29 +111,17 @@
     <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="password_hash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="registration_date" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="Achievements" Relationship="Self.FK__Achieveme__user___70DDC3D8" FromRole="users" ToRole="Achievements" />
-    <NavigationProperty Name="Activity_Log" Relationship="Self.FK__Activity___user___6D0D32F4" FromRole="users" ToRole="Activity_Log" />
-    <NavigationProperty Name="Learning_Statistics" Relationship="Self.FK__Learning___user___693CA210" FromRole="users" ToRole="Learning_Statistics" />
-    <NavigationProperty Name="Material" Relationship="Self.FK__Material__user_i__49C3F6B7" FromRole="users" ToRole="Material" />
-    <NavigationProperty Name="Reminder" Relationship="Self.FK__Reminder__user_i__5CD6CB2B" FromRole="users" ToRole="Reminder" />
     <Property Name="avatar_url" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="last_login" Type="DateTime" Precision="3" />
-    <Property Name="role" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="role" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Activity_Log" Relationship="Self.FK__Activity___user___571DF1D5" FromRole="users" ToRole="Activity_Log" />
+    <NavigationProperty Name="Learning_Goals" Relationship="Self.FK_Learning_Goals_users" FromRole="users" ToRole="Learning_Goals" />
+    <NavigationProperty Name="Learning_Statistics" Relationship="Self.FK__Learning___user___5812160E" FromRole="users" ToRole="Learning_Statistics" />
+    <NavigationProperty Name="Material" Relationship="Self.FK__Material__user_i__59FA5E80" FromRole="users" ToRole="Material" />
+    <NavigationProperty Name="Reminder" Relationship="Self.FK__Reminder__user_i__5BE2A6F2" FromRole="users" ToRole="Reminder" />
   </EntityType>
-  <Association Name="FK__Achieveme__user___70DDC3D8">
-    <End Role="users" Type="Self.users" Multiplicity="1" />
-    <End Role="Achievements" Type="Self.Achievements" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="users">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Achievements">
-        <PropertyRef Name="user_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Activity___user___6D0D32F4">
+  <Association Name="FK__Activity___user___571DF1D5">
     <End Role="users" Type="Self.users" Multiplicity="1" />
     <End Role="Activity_Log" Type="Self.Activity_Log" Multiplicity="*" />
     <ReferentialConstraint>
@@ -152,7 +133,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Learning___user___693CA210">
+  <Association Name="FK_Learning_Goals_users">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="Learning_Goals" Type="Self.Learning_Goals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Learning_Goals">
+        <PropertyRef Name="User_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Learning___user___5812160E">
     <End Role="users" Type="Self.users" Multiplicity="1" />
     <End Role="Learning_Statistics" Type="Self.Learning_Statistics" Multiplicity="*" />
     <ReferentialConstraint>
@@ -164,7 +157,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Mastery_L__mater__6477ECF3">
+  <Association Name="FK__Mastery_L__mater__59063A47">
     <End Role="Material" Type="Self.Material" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
@@ -178,7 +171,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Material__user_i__49C3F6B7">
+  <Association Name="FK__Material__user_i__59FA5E80">
     <End Role="users" Type="Self.users" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
@@ -192,7 +185,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Reminder__materi__5DCAEF64">
+  <Association Name="FK__Reminder__materi__5CD6CB2B">
     <End Role="Material" Type="Self.Material" Multiplicity="1" />
     <End Role="Reminder" Type="Self.Reminder" Multiplicity="*" />
     <ReferentialConstraint>
@@ -204,7 +197,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Repetitio__mater__4D94879B">
+  <Association Name="FK__Repetitio__mater__5DCAEF64">
     <End Role="Material" Type="Self.Material" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
@@ -218,21 +211,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Repetitio__mater__5165187F">
-    <End Role="Material" Type="Self.Material" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="Repetition_Schedule" Type="Self.Repetition_Schedule" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Material">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Repetition_Schedule">
-        <PropertyRef Name="material_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Tasks__material___73BA3083">
+  <Association Name="FK__Tasks__material___5FB337D6">
     <End Role="Material" Type="Self.Material" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
@@ -258,7 +237,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Reminder__user_i__5CD6CB2B">
+  <Association Name="FK__Reminder__user_i__5BE2A6F2">
     <End Role="users" Type="Self.users" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
@@ -272,51 +251,46 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="UroborosDBEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Achievements" EntityType="Self.Achievements" />
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Activity_Log" EntityType="Self.Activity_Log" />
+    <EntitySet Name="Learning_Goals" EntityType="Self.Learning_Goals" />
     <EntitySet Name="Learning_Statistics" EntityType="Self.Learning_Statistics" />
     <EntitySet Name="Mastery_Level" EntityType="Self.Mastery_Level" />
     <EntitySet Name="Material" EntityType="Self.Material" />
     <EntitySet Name="Material_Category" EntityType="Self.Material_Category" />
     <EntitySet Name="Reminder" EntityType="Self.Reminder" />
     <EntitySet Name="Repetition" EntityType="Self.Repetition" />
-    <EntitySet Name="Repetition_Schedule" EntityType="Self.Repetition_Schedule" />
     <EntitySet Name="Tasks" EntityType="Self.Tasks" />
     <EntitySet Name="users" EntityType="Self.users" />
-    <AssociationSet Name="FK__Achieveme__user___70DDC3D8" Association="Self.FK__Achieveme__user___70DDC3D8">
-      <End Role="users" EntitySet="users" />
-      <End Role="Achievements" EntitySet="Achievements" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Activity___user___6D0D32F4" Association="Self.FK__Activity___user___6D0D32F4">
+    <AssociationSet Name="FK__Activity___user___571DF1D5" Association="Self.FK__Activity___user___571DF1D5">
       <End Role="users" EntitySet="users" />
       <End Role="Activity_Log" EntitySet="Activity_Log" />
     </AssociationSet>
-    <AssociationSet Name="FK__Learning___user___693CA210" Association="Self.FK__Learning___user___693CA210">
+    <AssociationSet Name="FK_Learning_Goals_users" Association="Self.FK_Learning_Goals_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="Learning_Goals" EntitySet="Learning_Goals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Learning___user___5812160E" Association="Self.FK__Learning___user___5812160E">
       <End Role="users" EntitySet="users" />
       <End Role="Learning_Statistics" EntitySet="Learning_Statistics" />
     </AssociationSet>
-    <AssociationSet Name="FK__Mastery_L__mater__6477ECF3" Association="Self.FK__Mastery_L__mater__6477ECF3">
+    <AssociationSet Name="FK__Mastery_L__mater__59063A47" Association="Self.FK__Mastery_L__mater__59063A47">
       <End Role="Material" EntitySet="Material" />
       <End Role="Mastery_Level" EntitySet="Mastery_Level" />
     </AssociationSet>
-    <AssociationSet Name="FK__Material__user_i__49C3F6B7" Association="Self.FK__Material__user_i__49C3F6B7">
+    <AssociationSet Name="FK__Material__user_i__59FA5E80" Association="Self.FK__Material__user_i__59FA5E80">
       <End Role="users" EntitySet="users" />
       <End Role="Material" EntitySet="Material" />
     </AssociationSet>
-    <AssociationSet Name="FK__Reminder__materi__5DCAEF64" Association="Self.FK__Reminder__materi__5DCAEF64">
+    <AssociationSet Name="FK__Reminder__materi__5CD6CB2B" Association="Self.FK__Reminder__materi__5CD6CB2B">
       <End Role="Material" EntitySet="Material" />
       <End Role="Reminder" EntitySet="Reminder" />
     </AssociationSet>
-    <AssociationSet Name="FK__Repetitio__mater__4D94879B" Association="Self.FK__Repetitio__mater__4D94879B">
+    <AssociationSet Name="FK__Repetitio__mater__5DCAEF64" Association="Self.FK__Repetitio__mater__5DCAEF64">
       <End Role="Material" EntitySet="Material" />
       <End Role="Repetition" EntitySet="Repetition" />
     </AssociationSet>
-    <AssociationSet Name="FK__Repetitio__mater__5165187F" Association="Self.FK__Repetitio__mater__5165187F">
-      <End Role="Material" EntitySet="Material" />
-      <End Role="Repetition_Schedule" EntitySet="Repetition_Schedule" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Tasks__material___73BA3083" Association="Self.FK__Tasks__material___73BA3083">
+    <AssociationSet Name="FK__Tasks__material___5FB337D6" Association="Self.FK__Tasks__material___5FB337D6">
       <End Role="Material" EntitySet="Material" />
       <End Role="Tasks" EntitySet="Tasks" />
     </AssociationSet>
@@ -324,7 +298,7 @@
       <End Role="Material_Category" EntitySet="Material_Category" />
       <End Role="Material" EntitySet="Material" />
     </AssociationSet>
-    <AssociationSet Name="FK__Reminder__user_i__5CD6CB2B" Association="Self.FK__Reminder__user_i__5CD6CB2B">
+    <AssociationSet Name="FK__Reminder__user_i__5BE2A6F2" Association="Self.FK__Reminder__user_i__5BE2A6F2">
       <End Role="users" EntitySet="users" />
       <End Role="Reminder" EntitySet="Reminder" />
     </AssociationSet>

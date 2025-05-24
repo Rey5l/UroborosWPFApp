@@ -21,12 +21,12 @@ namespace UroborosApp.Utils
     /// </summary>
     public partial class AddCategoryWindow : Window
     {
-        private UroborosDBEntities _context;
+        private Entities _context;
 
         public AddCategoryWindow()
         {
             InitializeComponent();
-            _context = new UroborosDBEntities();
+            _context = Entities.GetContext();
         }
 
         private void AddCategory_Click(object sender, RoutedEventArgs e)
@@ -40,6 +40,7 @@ namespace UroborosApp.Utils
 
             var newCategory = new Material_Category
             {
+                user_id = CurrentUser.Id,
                 name = TitleTextBox.Text,
                 description = DescriptionTextBox.Text,
             };

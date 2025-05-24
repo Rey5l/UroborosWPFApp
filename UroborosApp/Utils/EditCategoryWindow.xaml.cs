@@ -21,14 +21,14 @@ namespace UroborosApp.Utils
     /// </summary>
     public partial class EditCategoryWindow : Window
     {
-        private UroborosDBEntities _context;
+        private Entities _context;
 
         private Material_Category _category;
 
         public EditCategoryWindow(int categoryId)
         {
             InitializeComponent();
-            _context = new UroborosDBEntities();
+            _context = new Entities();
             _category = _context.Material_Category.Find(categoryId);
             NameTextBox.Text = _category.name;
             DescriptionTextBox.Text = _category.description;

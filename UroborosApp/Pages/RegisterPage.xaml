@@ -8,6 +8,14 @@
       d:DesignHeight="550" d:DesignWidth="800"
       Title="RegisterPage">
 
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
     <Grid Background="White">
         <Grid VerticalAlignment="Center">
             <Grid Margin="15">
@@ -20,14 +28,16 @@
                     <TextBlock Text="Имя" 
                                FontSize="16"
                                Margin="0,5,0,5"/>       
-                    <TextBox x:Name="RegisterUsername" 
+                    <TextBox x:Name="RegisterUsername"
+                             Style="{StaticResource RoundedTextBoxStyle}"
                              Margin="0,0,0,10"
                              Padding="5"/>
 
                     <TextBlock Text="Email" 
                                FontSize="16"
                                Margin="0,5,0,5"/>       
-                    <TextBox x:Name="RegisterEmail" 
+                    <TextBox x:Name="RegisterEmail"
+                             Style="{StaticResource RoundedTextBoxStyle}"
                              Margin="0,0,0,10"
                              Padding="5"/>
 
@@ -35,7 +45,8 @@
                                FontSize="16"
                                Margin="0,5,0,5"/>
 
-                    <PasswordBox x:Name="RegisterPassword" 
+                    <PasswordBox x:Name="RegisterPassword"
+                                 Style="{StaticResource RoundedPasswordBoxStyle}"
                                  Margin="0,0,0,10"
                                  Padding="5"/>
                     
@@ -44,6 +55,7 @@
                                Margin="0,0,0,5"/>
 
                     <PasswordBox x:Name="RepeatingPassword" 
+                                 Style="{StaticResource RoundedPasswordBoxStyle}"
                                  Margin="0,0,0,20"
                                  Padding="5"/>
 

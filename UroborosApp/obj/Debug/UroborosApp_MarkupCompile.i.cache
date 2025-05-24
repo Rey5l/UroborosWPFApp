@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\user\source\repos\UroborosApp\UroborosApp\App.xaml
-8-348419730
+262082503413
 2-95638413
-29-1482207600
+45183832105
 58-288490015
-MainWindow.xaml;Pages\CategoriesPage.xaml;Pages\HomePage.xaml;Pages\LoginPage.xaml;Pages\RegisterPage.xaml;Utils\AddCategoryWindow.xaml;Utils\AddMaterialWindow.xaml;Utils\EditCategoryWindow.xaml;
+MainWindow.xaml;Pages\ActivityLogPage.xaml;Pages\CategoriesPage.xaml;Pages\HomePage.xaml;Pages\LearningGoalsPage.xaml;Pages\LoginPage.xaml;Pages\ProfilePage.xaml;Pages\ProgressPage.xaml;Pages\RegisterPage.xaml;Pages\ReminderPage.xaml;Pages\ReviewSchedulePage.xaml;Pages\StatisticsPage.xaml;Pages\TasksPage.xaml;Styles.xaml;Utils\AddCategoryWindow.xaml;Utils\AddMaterialWindow.xaml;Utils\AddReminderWindow.xaml;Utils\ChangePasswordWindow.xaml;Utils\EditCategoryWindow.xaml;Utils\EditMaterialWindow.xaml;Utils\EditReminderWindow.xaml;Utils\LearningGoalsDialog.xaml;Utils\RecallScoreDialog.xaml;Utils\RescheduleDialog.xaml;Utils\TaskDialog.xaml;Utils\TimePickerControl.xaml;
 
-False
+True
 
