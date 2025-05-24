@@ -18,14 +18,34 @@ using UroborosApp.Utils;
 namespace UroborosApp.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для HomePage.xaml
+    /// Страница домашнего интерфейса приложения, отображающая материалы пользователя.
+    /// Позволяет управлять материалами: добавлять, редактировать, удалять, фильтровать и искать.
     /// </summary>
+    /// <remarks>
+    /// Эта страница взаимодействует с базой данных через Entity Framework и использует паттерн MVVM частично для управления данными.
+    /// Также реализуется логирование действий пользователя через таблицу Activity_Log.
+    /// </remarks>
     public partial class HomePage : Page
     {
         private Entities _context;
 
+        /// <summary>
+        /// Коллекция материалов, отображаемых на странице.
+        /// Используется для привязки данных к ListView.
+        /// </summary>
+        /// <value>ObservableCollection<Material></value>
         public ObservableCollection<Material> Materials { get; set; }
 
+        /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="HomePage"/>.
+        /// Загружает контекст базы данных и начальные данные (категории и материалы).
+        /// </summary>
+        /// <example>
+        /// <code>
+        /// var homePage = new HomePage();
+        /// this.MainFrame.Content = homePage;
+        /// </code>
+        /// </example>
         public HomePage()
         {
             InitializeComponent();
@@ -35,6 +55,14 @@ namespace UroborosApp.Pages
             LoadMaterials();
         }
 
+
+        /// <summary>
+        /// Обрабатывает событие нажатия кнопки "Добавить материал".
+        /// Открывает окно добавления материала и сохраняет лог действия.
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Данные события.</param>
+        /// <seealso cref="AddMaterialWindow"/>
         private void AddMaterial_Click(object sender, RoutedEventArgs e)
         {
             var addMaterialWindow = new AddMaterialWindow();
@@ -51,6 +79,10 @@ namespace UroborosApp.Pages
             }
         }
 
+        /// <summary>
+        /// Загружает категории материалов текущего пользователя для выпадающего списка фильтрации.
+        /// </summary>
+        /// <exception cref="Exception">Возможна ошибка при обращении к базе данных.</exception>
         private void LoadCategories()
         {
             var categories = _context.Material_Category
@@ -60,6 +92,16 @@ namespace UroborosApp.Pages
             SortComboBox.ItemsSource = categories;
         }
 
+        /// <summary>
+        /// Загружает материалы текущего пользователя из базы данных.
+        /// Применяет фильтры по поисковому запросу и выбранной категории.
+        /// Сохраняет действия в журнал активности.
+        /// </summary>
+        /// <list type="bullet">
+        /// <item>Выполняется поиск по заголовкам и содержимому</item>
+        /// <item>Фильтруются по выбранной категории</item>
+        /// <item>Обновляется список отображаемых элементов</item>
+        /// </list>
         private void LoadMaterials()
         {
             var materials = _context.Material
@@ -107,6 +149,13 @@ namespace UroborosApp.Pages
             MaterialList.ItemsSource = Materials;
         }
 
+        /// <summary>
+        /// Обрабатывает изменение текста в поле поиска.
+        /// Вызывает перезагрузку материалов с учетом нового поискового запроса.
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Данные события.</param>
+        /// <remarks>Триггерится каждый раз при изменении текста в SearchBox.</remarks>
         private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             LoadMaterials();
